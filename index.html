@@ -70,7 +70,7 @@ textarea{
 .brand-logo{
   width:52px;
   height:52px;
-  object-fit:cover;
+  object-fit:contain;
   border-radius:13px;
   box-shadow:0 5px 18px rgba(20,43,69,.12);
 }
@@ -801,14 +801,11 @@ footer{
 
   <a class="logo" href="#top">
 
-    <!--
-      Logo is embedded directly into this HTML.
-      No separate logo file is required.
-    -->
+    <!-- Logo file is in the same folder as index.html. -->
 
     <img
       class="brand-logo"
-      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAAAXNSR0IArs4c6QAAAIRlWElmTU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAACQAAAAAQAAAJAAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAAfSgAwAEAAAAAQAAAfQAAAAAZVYvFQAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAABxpRE9UAAAAAgAAAAAAAAD6AAAAKAAAAPoAAAD6AAJRKTTTTDgAAEAASURBVHgBbJ3r20/V+7WLKArRjmxuEiHbRFERUVQ2qVQUZVdIoef/X884x7iutdbt+3sxjzk/N+/P4xzXmHM999xzzw+s55/PWqJ9yfNL9HvJsGTJtJZyXrp0WDquF3R+YXjhBf3thWXDsmVLdWZ/YVjGvny5zsuG5Vqcl/d6cfnw4kvLh5defFG71osvDS+9NK0VK14aVqxYob+t8L5ixcphxcqVw0r9bcXLLw8rtV7m98pXhpc5e70yvLLq5eGVV7T3WrVK51XDqlWvaK0eVq3WefXqYTVrzaphjXfOa4Y1Xq8Or67RepW11vta7zqvXTus01q7bp3XunU6r31tWLdO67V13l9/fd3w2muvD6+//lrtOuv3G69rf+ON4Y35evON4c0336z1lva3hrfeylq//q1h/Vvr9Xv9sH79tDZw3rBh2PC2FvuGt73e5vfbG4eNGzcMG72/nX3TJv1t47BJa6POm1ibszZv2TRs2bx52LxFa/OWYcuWaS0sbBkWFhb0t4Vhq/aFha3DwtatOW/bNmzV2sbvre8M2zh7vTO8s33b8M477wzbtdjf2b5d+/Zh+3b9bfu7w/Z3s97V/u6O7cMO7Tt27JitncPOHVo7dw7v7Xxvtr83vPfee8Murfd27fLapX3Xe7uHXbu0duusfc+eXcPu3Xu0787+Puc9w/tae95/f3h/vva+P+zdu7fWPu37hn37svbv3zfs379fv/d758w6wH7w4HDg4IHh4IEDw4EDOmsd1O8DBw8Nhw4dGA55P5j9gw/0t0PDB1qHdP6AdZh1eDj84QfDh951Pvzh8OGH0zpy5Mhw5MjR4UPtR7VzPnL06PCR9qMffeT1kX4fPfrx8NFHrI+8f3zso+Hjjz8ejml5P3ZM+7HhmPZjx44Px44fH473+uTY8Mknn9T6dNw//fTTgfXZp59p/2zaP/tsOKH12YkTXie0nzhxMuukzidPDp9/fmI4efJz7Tqzn+L8+XBK6/NTp4ZT83X61HD69OlaXwynv/hi+KLWmTNfDGfOnNHvM97PnDnr/az+dubLL4ezX54dvjx7djh7VmetL/23r4avvvpy+OrL2X7unP52bjj31VfDOZ29zp8fzrO+Pjd87Z3fXw9ff836Zvi"
+      src="./logo.png"
       alt="SpaceRock Solutions"
     >
 
@@ -1808,6 +1805,7 @@ function setInquiry(value){
 }
 
 </script>
+
 
 </main>
 
