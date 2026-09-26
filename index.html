@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SpaceRock Solutions — precision pediatric dental recruitment for independent practices across the United States.">
+<title>SpaceRock Solutions | Pediatric Dental Recruitment</title>
+<style>
+:root{
+  --navy:#14283d; --ink:#20384f; --mint:#eef5fa; --cream:#fffaf1; --white:#fff;
+  --coral:#f28b78; --yellow:#f4cf63; --blue:#79b8d5; --green:#6eb496; --muted:#647688;
+  --line:#d7e6df; --shadow:0 16px 45px rgba(20,40,61,.10); --radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--mint);
+  color:var(--ink);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.55
+}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1160px,92%);margin:auto}
+
+.topbar{
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.brand-logo{
+  width:52px;
+  height:52px;
+  object-fit:cover;
+  border-radius:13px;
+  box-shadow:0 5px 18px rgba(20,43,69,.12)
+}
+
+.nav{
+  display:flex;
+  gap:26px;
+  color:#53677a;
+  font-size:.88rem;
+  font-weight:700
+}
+
+.nav a:hover{color:var(--navy)}
+
+.hero{
+  padding:58px 0 95px;
+  position:relative;
+  overflow:hidden
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:50px;
+  align-items:center
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 13px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid var(--line);
+  font-size:.74rem;
+  font-weight:850;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--navy)
+}
+
+.pill-dot{
+  width:8px;
+  height:8px;
+  background:var(--coral);
+  border-radius:50%
+}
+
+h1{
+  font-size:clamp(3.1rem,6.5vw,6.1rem);
+  line-height:.92;
+  letter-spacing:-.07em;
+  margin:22px 0
+}
+
+.hero-copy{
+  font-size:1.15rem;
+  color:#52687b;
+  max-width:680px
+}
+
+.cta{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:13px;
+  padding:13px 18px;
+  font-weight:850;
+  border:1px solid var(--navy);
+  font-size:.9rem;
+  transition:.2s;
+  cursor:pointer
+}
+
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--navy);color:white}
+.btn-light{background:white}
+
+.hero-art{
+  position:relative;
+  min-height:370px
+}
+
+.cloud{
+  position:absolute;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  border-radius:38px;
+  padding:22px
+}
+
+.cloud.one{
+  right:5%;
+  top:12%;
+  width:270px;
+  transform:rotate(4deg)
+}
+
+.cloud.two{
+  left:0;
+  bottom:6%;
+  width:240px;
+  transform:rotate(-5deg)
+}
+
+.space-rock{
+  width:128px;
+  height:108px;
+  background:#f4cf63;
+  border:5px solid #fff;
+  border-radius:47% 53% 49% 51%;
+  position:absolute;
+  left:29%;
+  top:28%;
+  transform:rotate(-8deg);
+  box-shadow:9px 11px 0 rgba(75,134,173,.18);
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+
+.space-rock:before,
+.space-rock:after{
+  content:"";
+  position:absolute;
+  width:11px;
+  height:14px;
+  border-radius:50%;
+  background:#14283d;
+  top:34px
+}
+
+.space-rock:before{left:34px}
+.space-rock:after{right:34px}
+
+.space-rock span{
+  position:absolute;
+  left:44px;
+  top:52px;
+  width:36px;
+  height:16px;
+  border-bottom:4px solid #14283d;
+  border-radius:0 0 24px 24px;
+  color:transparent
+}
+
+.space-rock span:after{
+  content:"✦";
+  position:absolute;
+  right:-22px;
+  top:-49px;
+  color:#fff;
+  font-size:16px
+}
+
+.star{
+  position:absolute;
+  color:var(--coral);
+  font-size:24px
+}
+
+.s1{right:3%;top:5%}
+.s2{left:9%;top:20%;color:var(--blue)}
+.s3{right:25%;bottom:2%;color:var(--yellow)}
+
+.friendly-face{display:none}
+
+.mini-stats{
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap;
+  margin-top:28px
+}
+
+.stat{
+  background:rgba(255,255,255,.7);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:9px 12px;
+  font-size:.78rem;
+  font-weight:800;
+  color:#52687b
+}
+
+section{padding:88px 0}
+
+.section-top{
+  display:flex;
+  justify-content:space-between;
+  gap:35px;
+  align-items:end;
+  margin-bottom:30px
+}
+
+.kicker{
+  color:#4d987a;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:.7rem;
+  font-weight:900
+}
+
+h2{
+  font-size:clamp(2.15rem,4vw,3.5rem);
+  line-height:1;
+  letter-spacing:-.055em;
+  margin:8px 0 0
+}
+
+.section-desc{
+  max-width:430px;
+  color:var(--muted);
+  margin:0
+}
+
+.roster{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow)
+}
+
+.candidate{
+  padding:23px;
+  min-height:235px;
+  position:relative;
+  overflow:hidden
+}
+
+.candidate:after{
+  content:"✦";
+  position:absolute;
+  right:18px;
+  top:13px;
+  color:var(--yellow);
+  font-size:20px
+}
+
+.candidate-tag{
+  display:block;
+  font-size:1.02rem;
+  font-weight:950;
+  line-height:1.15;
+  letter-spacing:-.025em;
+  text-transform:uppercase;
+  color:#142b45;
+  background:#e6f3fa;
+  border:1px solid #bfdce9;
+  border-radius:16px;
+  padding:16px 17px;
+  margin:0 0 18px;
+  box-shadow:inset 0 -2px 0 rgba(75,134,173,.08)
+}
+
+.candidate h3{
+  font-size:.96rem;
+  letter-spacing:-.025em;
+  line-height:1.2;
+  margin:0 0 8px
+}
+
+.candidate p{
+  font-size:.86rem;
+  color:var(--muted);
+  margin:0 0 10px
+}
+
+.focus{
+  color:var(--ink)!important;
+  font-size:.82rem!important
+}
+
+.opps{
+  background:linear-gradient(135deg,#f2f9fc 0%,#ffffff 55%,#fffaf1 100%);
+  color:var(--navy);
+  position:relative;
+  overflow:hidden
+}
+
+.opps:before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  border-radius:50%;
+  right:-300px;
+  top:-300px;
+  background:rgba(75,134,173,.07)
+}
+
+.opps .kicker{color:#4b86ad}
+.opps .section-desc{color:#627487}
+
+.opportunity-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px
+}
+
+.opp{
+  background:rgba(255,255,255,.94);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:27px;
+  min-height:300px;
+  position:relative
+}
+
+.opp h3{
+  font-size:1.45rem;
+  line-height:1.15;
+  letter-spacing:-.035em;
+  margin:11px 0 10px
+}
+
+.opp-location{
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-weight:900;
+  color:#4b86ad
+}
+
+.opp p{
+  color:#627487;
+  font-size:.87rem
+}
+
+.pay{
+  margin-top:18px;
+  padding-top:16px;
+  border-top:1px solid var(--line)
+}
+
+.pay strong{
+  display:block;
+  font-size:1rem;
+  margin-bottom:5px
+}
+
+.pay span{
+  display:block;
+  color:#627487;
+  font-size:.79rem
+}
+
+.details{
+  margin:14px 0 0;
+  padding-left:18px;
+  color:#627487;
+  font-size:.83rem
+}
+
+.area{
+  margin-top:16px;
+  font-size:.8rem;
+  color:#627487
+}
+
+.location-note{
+  text-align:center;
+  margin-top:34px;
+  color:#627487;
+  font-size:.77rem
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:18px
+}
+
+.contact-copy{
+  padding:34px;
+  background:var(--cream);
+  border-radius:var(--radius);
+  border:1px solid #eadfca
+}
+
+.contact-copy h3{
+  font-size:2rem;
+  line-height:1.05;
+  letter-spacing:-.045em;
+  margin:12px 0
+}
+
+.contact-copy p{color:var(--muted)}
+
+.email{
+  display:inline-block;
+  margin-top:10px;
+  font-weight:900
+}
+
+.inquiry-paths{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-bottom:18px
+}
+
+.inquiry-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:17px 19px;
+  display:flex;
+  align-items:center;
+  gap:13px;
+  box-shadow:var(--shadow);
+  transition:.2s
+}
+
+.inquiry-card:hover{
+  transform:translateY(-2px);
+  border-color:#9fc3d8
+}
+
+.inquiry-icon{
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  background:#e6f1f7;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  color:#4b86ad
+}
+
+.inquiry-card strong{
+  display:block;
+  font-size:.88rem
+}
+
+.inquiry-card small{
+  display:block;
+  color:var(--muted);
+  font-size:.75rem;
+  margin-top:2px
+}
+
+form{padding:28px}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px
+}
+
+label{
+  display:block;
+  font-size:.75rem;
+  font-weight:850;
+  margin-bottom:6px;
+  color:#52687b
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  font:inherit;
+  padding:12px 13px;
+  border:1px solid var(--line);
+  border-radius:11px;
+  background:#fbfefd;
+  color:var(--ink);
+  outline:none
+}
+
+textarea{
+  min-height:125px;
+  resize:vertical
+}
+
+.full{grid-column:1/-1}
+
+.form-note{
+  font-size:.73rem;
+  color:var(--muted);
+  margin:12px 0 17px
+}
+
+footer{
+  padding:30px 0 40px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:.76rem
+}
+
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap
+}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{
+    max-width:520px;
+    width:100%;
+    margin:auto
+  }
+  .roster{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:650px){
+  .nav{display:none}
+  .hero{padding-top:35px}
+  .hero-art{min-height:300px}
+  .cloud.one{
+    right:0;
+    width:210px
+  }
+  .cloud.two{width:190px}
+  section{padding:65px 0}
+  .section-top{display:block}
+  .section-desc{margin-top:14px}
+  .roster,
+  .opportunity-grid,
+  .form-grid{
+    grid-template-columns:1fr
+  }
+  .full{grid-column:auto}
+  .inquiry-paths{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header class="wrap topbar">
+  <a class="logo" href="#top">
+    <img class="brand-logo" src="135A72A4-1369-4C3C-AA1E-01EBC50C41BD.PNG" alt="SpaceRock Solutions">
+  </a>
+
+  <nav class="nav">
+    <a href="#roster">Candidate Roster</a>
+    <a href="#opportunities">Opportunities</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+
+    <div>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        Pediatric dental recruitment
+      </div>
+
+      <h1>
+        Connecting Pediatric Dentists with Independent Private Practices Across the U.S.
+      </h1>
+
+      <p class="hero-copy">
+        Professional talent acquisition focused exclusively on pediatric dental specialists and independent private practices across the United States.
+      </p>
+
+      <div class="cta">
+        <a class="btn btn-dark" href="#opportunities">View opportunities</a>
+        <a class="btn btn-light" href="#contact">Talk to SpaceRock</a>
+      </div>
+
+      <div class="mini-stats">
+        <span class="stat">100% candidate-free</span>
+        <span class="stat">Independent practices</span>
+        <span class="stat">90-day · 50% refund guarantee</span>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+
+      <span class="star s1">✦</span>
+      <span class="star s2">✧</span>
+      <span class="star s3">✦</span>
+
+      <div class="space-rock">
+        <span>smile</span>
+      </div>
+
+      <div class="cloud one">
+        <strong>For practice owners</strong>
+        <br>
+        <span style="color:#647688;font-size:.84rem">
+          Targeted searches. Qualified pediatric specialists. Direct conversations.
+        </span>
+      </div>
+
+      <div class="cloud two">
+        <strong>For pediatric specialists</strong>
+        <br>
+        <span style="color:#647688;font-size:.84rem">
+          No candidate fees. Confidential access to independent practices.
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="roster">
+
+  <div class="wrap">
+
+    <div class="section-top">
+
+      <div>
+        <div class="kicker">Active candidate roster</div>
+
+        <h2>
+          Pediatric specialists<br>
+          ready for the right market.
+        </h2>
+      </div>
+
+      <p class="section-desc">
+        Current profiles are shown by market. Detailed candidate information is shared privately with relevant practices.
+      </p>
+
+    </div>
+
+
+    <div class="roster">
+
+      <article class="card candidate">
+
+        <div class="candidate-tag">
+          Denver Area · CO
+        </div>
+
+        <h3>Pediatric Specialist</h3>
+
+        <p>
+          <b>DDS (2019)</b> · Pediatric Residency Completed (2021)
+        </p>
+
+        <p>
+          <b>Experience:</b> 5+ years of clinical pediatric practice.
+        </p>
+
+        <p class="focus">
+          <b>Focus:</b> Open to opportunities in the area.
+        </p>
+
+      </article>
+
+
+      <article class="card candidate">
+
+        <div class="candidate-tag">
+          Minneapolis / St. Paul · MN
+        </div>
+
+        <h3>Pediatric Specialist</h3>
+
+        <p>
+          <b>DDS (2021)</b> · Pediatric Residency Completed (2023)
+        </p>
+
+        <p>
+          <b>Experience:</b> 3+ years post-residency pediatric practice.
+        </p>
+
+        <p class="focus">
+          <b>Focus:</b> Open to opportunities in the area.
+        </p>
+
+      </article>
+
+
+      <article class="card candidate">
+
+        <div class="candidate-tag">
+          Jacksonville Area · FL
+        </div>
+
+        <h3>Pediatric Specialist</h3>
+
+        <p>
+          <b>Pediatric Dentistry Residency Graduate (2026)</b>
+        </p>
+
+        <p>
+          <b>Experience:</b> Recent residency graduate.
+        </p>
+
+        <p class="focus">
+          <b>Focus:</b> Open to opportunities in the area.
+        </p>
+
+      </article>
+
+
+      <article class="card candidate">
+
+        <div class="candidate-tag">
+          Memphis Area · TN
+        </div>
+
+        <h3>Pediatric Specialist</h3>
+
+        <p>
+          <b>DDS (2021)</b> · Pediatric Residency Completed (2023)
+        </p>
+
+        <p>
+          <b>Experience:</b> 3+ years specialized pediatric care.
+        </p>
+
+        <p class="focus">
+          <b>Focus:</b> Open to opportunities in the area.
+        </p>
+
+      </article>
+
+
+      <article class="card candidate">
+
+        <div class="candidate-tag">
+          Southern California
+        </div>
+
+        <h3>Pediatric Specialist</h3>
+
+        <p>
+          <b>DDS (2020)</b> · Pediatric Residency Completed (2022) · Board-Certified
+        </p>
+
+        <p>
+          <b>Experience:</b> 4+ years clinical experience.
+        </p>
+
+        <p class="focus">
+          <b>Focus:</b> Open to opportunities in the area.
+        </p>
+
+      </article>
+
+
+      <article class="card candidate">
+
+        <div class="candidate-tag">
+          Southern California
+        </div>
+
+        <h3>Pediatric Specialist</h3>
+
+        <p>
+          <b>DDS (2019)</b> · Pediatric Residency Completed (2021)
+        </p>
+
+        <p>
+          <b>Experience:</b> 5+ years dedicated pediatric private practice.
+        </p>
+
+        <p class="focus">
+          <b>Focus:</b> Open to opportunities in the area.
+        </p>
+
+      </article>
+
+
+      <article class="card candidate">
+
+        <div class="candidate-tag">
+          New York City Metro · NY
+        </div>
+
+        <h3>Pediatric Specialist</h3>
+
+        <p>
+          <b>DDS (2021)</b> · Pediatric Residency Completed (2023)
+        </p>
+
+        <p>
+          <b>Experience:</b> 3+ years across hospital and private practice.
+        </p>
+
+        <p class="focus">
+          <b>Focus:</b> Open to opportunities in the area.
+        </p>
+
+      </article>
+
+
+      <article class="card candidate">
+
+        <div class="candidate-tag">
+          New York City Metro · NY
+        </div>
+
+        <h3>Pediatric Specialist</h3>
+
+        <p>
+          <b>Pediatric Dentistry Residency Graduate (2026)</b>
+        </p>
+
+        <p>
+          <b>Experience:</b> Recent residency graduate.
+        </p>
+
+        <p class="focus">
+          <b>Focus:</b> Open to opportunities in the area.
+        </p>
+
+      </article>
+
+
+      <article class="card candidate">
+
+        <div class="candidate-tag">
+          Cleveland Area · OH
+        </div>
+
+        <h3>Pediatric Resident</h3>
+
+        <p>
+          <b>Graduating 2027</b>
+        </p>
+
+        <p>
+          <b>Seeking:</b> Full-time pediatric dental opportunity in and around Cleveland following residency.
+        </p>
+
+        <p class="focus">
+          <b>Focus:</b> Open to opportunities in the area.
+        </p>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="opportunities" class="opps">
+
+  <div class="wrap">
+
+    <div class="section-top">
+
+      <div>
+        <div class="kicker">
+          Confidential private practice opportunities
+        </div>
+
+        <h2>
+          Six markets.<br>
+          Clear terms.
+        </h2>
+      </div>
+
+      <p class="section-desc">
+        Current opportunities from independent practices. Specific practice identities and additional details are shared privately with qualified candidates.
+      </p>
+
+    </div>
+
+
+    <div class="opportunity-grid">
+
+
+      <article class="opp">
+
+        <div class="opp-location">
+          Redding Area · CA
+        </div>
+
+        <h3>
+          Full-Time Pediatric Dentist
+        </h3>
+
+        <p>
+          Independent practice opportunity in Northern California.
+        </p>
+
+        <div class="pay">
+
+          <strong>
+            $1,500/day guarantee — New Graduates
+          </strong>
+
+          <span>
+            New graduate guarantee.
+          </span>
+
+          <br>
+
+          <strong>
+            $2,000/day guarantee — Experienced Pediatric Dentists
+          </strong>
+
+          <span>
+            Daily guarantee for experienced candidates.
+          </span>
+
+        </div>
+
+        <ul class="details">
+          <li>4 days/week standard; 5-day option available</li>
+          <li>Partnership track & relocation assistance</li>
+          <li>Direct clinical mentorship</li>
+          <li>Employer-paid malpractice, CE, licensing, dues, healthcare & 401(k)</li>
+        </ul>
+
+        <div class="area">
+          ⛰ Mountain views · hiking · lower cost of living than major California metro hubs
+        </div>
+
+      </article>
+
+
+      <article class="opp">
+
+        <div class="opp-location">
+          Columbus Area · OH
+        </div>
+
+        <h3>
+          Full-Time Pediatric Dentist
+        </h3>
+
+        <div class="pay">
+
+          <strong>
+            $1,400/day guarantee vs. 40% collections
+          </strong>
+
+          <span>
+            Plus up to $50,000 sign-on bonus.
+          </span>
+
+        </div>
+
+        <p>
+          <b>Practice performance:</b>
+          99% collection rate; top-earning doctors reported at $650,000–$780,000 annually.
+        </p>
+
+        <div class="area">
+          Family-friendly suburbs · public schools · growing Midwest metro
+        </div>
+
+      </article>
+
+
+      <article class="opp">
+
+        <div class="opp-location">
+          Asheville Area · NC
+        </div>
+
+        <h3>
+          Full-Time Pediatric Dentist
+        </h3>
+
+        <div class="pay">
+
+          <strong>
+            $1,600/day guarantee vs. 30% collections
+          </strong>
+
+          <span>
+            Whichever is higher.
+          </span>
+
+        </div>
+
+        <p>
+          <b>Schedule:</b>
+          4 days/week, Monday–Thursday.
+        </p>
+
+        <div class="area">
+          Blue Ridge Mountains · arts culture · historic downtown
+        </div>
+
+      </article>
+
+
+      <article class="opp">
+
+        <div class="opp-location">
+          Annapolis Area · MD
+        </div>
+
+        <h3>
+          Full-Time Pediatric Dentist
+        </h3>
+
+        <div class="pay">
+
+          <strong>
+            $1,200/day guarantee vs. 35% production
+          </strong>
+
+          <span>
+            Whichever is higher; very good earning potential.
+          </span>
+
+        </div>
+
+        <p>
+          <b>Schedule:</b>
+          Flexible 3–5 days/week.
+        </p>
+
+        <div class="area">
+          Chesapeake Bay · waterfront community · access to D.C. & Baltimore
+        </div>
+
+      </article>
+
+
+      <article class="opp">
+
+        <div class="opp-location">
+          San Antonio Area · TX
+        </div>
+
+        <h3>
+          Full-Time Pediatric Dentist
+        </h3>
+
+        <div class="pay">
+
+          <strong>
+            Competitive daily guarantee vs. 32% collections
+          </strong>
+
+          <span>
+            Guarantee based on experience.
+          </span>
+
+        </div>
+
+        <p>
+          The 32% collection split includes hygienist/assistant procedures plus interceptive ortho/Invisalign.
+        </p>
+
+        <div class="area">
+          Family-oriented market · Texas growth · no state individual income tax
+        </div>
+
+      </article>
+
+
+      <article class="opp">
+
+        <div class="opp-location">
+          Greater Lowell Area · MA
+        </div>
+
+        <h3>
+          Full-Time Pediatric Dentist
+        </h3>
+
+        <div class="pay">
+
+          <strong>
+            Competitive daily guarantee + 40% quarterly bonus
+          </strong>
+
+          <span>
+            Bonus applies above guarantee.
+          </span>
+
+        </div>
+
+        <p>
+          <b>Schedule:</b>
+          3–4 days/week.
+          <b>Benefits:</b>
+          3 weeks paid vacation, 1 week sick leave, customizable benefits.
+        </p>
+
+        <div class="area">
+          Established private practice · near Boston · New England coastal towns
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="location-note">
+      Based in Bangalore, India · Exclusively focused on placing pediatric dentists in the United States
+    </div>
+
+  </div>
+</section>
+
+
+<section id="contact">
+
+  <div class="wrap">
+
+    <div class="section-top">
+
+      <div>
+        <div class="kicker">
+          Direct contact & custom inquiries
+        </div>
+
+        <h2>
+          Start an inquiry in under a minute.
+        </h2>
+      </div>
+
+      <p class="section-desc">
+        Choose the path that fits you. Practice owners can request a custom search, and pediatric specialists can submit their profile for a market not currently listed.
+      </p>
+
+    </div>
+
+
+    <div class="inquiry-paths">
+
+      <a
+        class="inquiry-card"
+        href="#contact-form"
+        onclick="setInquiry('Practice Owner')"
+      >
+        <span class="inquiry-icon">⌂</span>
+
+        <span>
+          <strong>Practice Owners</strong>
+          <small>Tell us where you are hiring.</small>
+        </span>
+      </a>
+
+
+      <a
+        class="inquiry-card"
+        href="#contact-form"
+        onclick="setInquiry('Pediatric Specialist / Resident')"
+      >
+        <span class="inquiry-icon">✦</span>
+
+        <span>
+          <strong>Pediatric Specialists & Residents</strong>
+          <small>Tell us where you want to practice.</small>
+        </span>
+      </a>
+
+    </div>
+
+
+    <div class="contact-grid" id="contact-form">
+
+
+      <div class="contact-copy">
+
+        <div style="font-size:1.8rem">
+          ✦ 🪨
+        </div>
+
+        <h3>
+          Two simple ways to reach us.
+        </h3>
+
+        <p>
+          <strong>Practice owners:</strong>
+          Targeted searches. Qualified pediatric specialists. Direct conversations.
+        </p>
+
+        <p>
+          <strong>Pediatric specialists:</strong>
+          No candidate fees. Confidential access to independent practices.
+        </p>
+
+        <p>
+          Every inquiry goes directly to Aswin at SpaceRock Solutions.
+        </p>
+
+        <a
+          class="email"
+          href="mailto:aswin@spacerocksolutions.com"
+        >
+          aswin@spacerocksolutions.com
+        </a>
+
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+
+          <button
+            class="btn btn-dark"
+            type="button"
+            onclick="setInquiry('Practice Owner')"
+          >
+            Practice Owner Inquiry
+          </button>
+
+          <button
+            class="btn btn-light"
+            type="button"
+            onclick="setInquiry('Pediatric Specialist / Resident')"
+          >
+            Candidate Roster Inquiry
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <form
+        class="card"
+        action="mailto:aswin@spacerocksolutions.com"
+        method="post"
+        enctype="text/plain"
+      >
+
+        <div class="form-grid">
+
+
+          <div>
+
+            <label for="type">
+              I am a
+            </label>
+
+            <select
+              id="type"
+              name="Inquiry Type"
+              required
+            >
+              <option value="">
+                Select one
+              </option>
+
+              <option>
+                Practice Owner
+              </option>
+
+              <option>
+                Pediatric Specialist / Resident
+              </option>
+            </select>
+
+          </div>
+
+
+          <div>
+
+            <label for="name">
+              Name
+            </label>
+
+            <input
+              id="name"
+              name="Name"
+              type="text"
+              autocomplete="name"
+              required
+            >
+
+          </div>
+
+
+          <div>
+
+            <label for="email">
+              Email
+            </label>
+
+            <input
+              id="email"
+              name="Email"
+              type="email"
+              autocomplete="email"
+              required
+            >
+
+          </div>
+
+
+          <div>
+
+            <label for="market">
+              Market / Location
+            </label>
+
+            <input
+              id="market"
+              name="Market / Location"
+              type="text"
+              placeholder="City, State"
+            >
+
+          </div>
+
+
+          <div class="full">
+
+            <label for="message">
+              Tell us what you need
+            </label>
+
+            <textarea
+              id="message"
+              name="Message"
+              required
+              placeholder="For example: hiring in Dallas; or seeking a role around Cleveland after residency..."
+            ></textarea>
+
+          </div>
+
+        </div>
+
+
+        <p class="form-note">
+          Clicking send opens a prepared email addressed to
+          <strong>aswin@spacerocksolutions.com</strong>
+          with the form details.
+        </p>
+
+
+        <button
+          class="btn btn-dark"
+          type="submit"
+        >
+          Email My Inquiry →
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+
+function setInquiry(value){
+
+  const select = document.getElementById('type');
+
+  select.value = value;
+
+  document
+    .getElementById('contact')
+    .scrollIntoView({
+      behavior:'smooth',
+      block:'center'
+    });
+
+  document
+    .getElementById('name')
+    .focus();
+
+}
+
+</script>
+
+</main>
+
+
+<footer>
+
+  <div class="wrap footer-row">
+
+    <span>
+      © 2026 SpaceRock Solutions
+    </span>
+
+    <span>
+      Precision recruitment for independent pediatric dental practices.
+    </span>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
