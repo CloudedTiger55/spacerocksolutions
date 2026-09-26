@@ -5,29 +5,66 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="SpaceRock Solutions — precision pediatric dental recruitment for independent practices across the United States.">
 <title>SpaceRock Solutions | Pediatric Dental Recruitment</title>
+
 <style>
 :root{
-  --navy:#14283d; --ink:#20384f; --mint:#eef5fa; --cream:#fffaf1; --white:#fff;
-  --coral:#f28b78; --yellow:#f4cf63; --blue:#79b8d5; --green:#6eb496; --muted:#647688;
-  --line:#d7e6df; --shadow:0 16px 45px rgba(20,40,61,.10); --radius:24px;
+  --navy:#14283d;
+  --ink:#20384f;
+  --mint:#eef5fa;
+  --cream:#fffaf1;
+  --white:#fff;
+  --coral:#f28b78;
+  --yellow:#f4cf63;
+  --blue:#79b8d5;
+  --muted:#647688;
+  --line:#d7e6df;
+  --shadow:0 16px 45px rgba(20,40,61,.10);
+  --radius:24px;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+
 body{
   margin:0;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
   background:var(--mint);
   color:var(--ink);
   font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  line-height:1.55
+  line-height:1.55;
 }
-a{text-decoration:none;color:inherit}
-.wrap{width:min(1160px,92%);margin:auto}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+  font-family:inherit;
+}
+
+.wrap{
+  width:min(1160px,92%);
+  margin:auto;
+  max-width:100%;
+}
 
 .topbar{
   height:78px;
   display:flex;
   align-items:center;
-  justify-content:space-between
+  justify-content:space-between;
 }
 
 .brand-logo{
@@ -35,7 +72,7 @@ a{text-decoration:none;color:inherit}
   height:52px;
   object-fit:cover;
   border-radius:13px;
-  box-shadow:0 5px 18px rgba(20,43,69,.12)
+  box-shadow:0 5px 18px rgba(20,43,69,.12);
 }
 
 .nav{
@@ -43,22 +80,26 @@ a{text-decoration:none;color:inherit}
   gap:26px;
   color:#53677a;
   font-size:.88rem;
-  font-weight:700
+  font-weight:700;
 }
 
-.nav a:hover{color:var(--navy)}
+.nav a:hover{
+  color:var(--navy);
+}
+
+/* HERO */
 
 .hero{
   padding:58px 0 95px;
   position:relative;
-  overflow:hidden
+  overflow:hidden;
 }
 
 .hero-grid{
   display:grid;
   grid-template-columns:1.2fr .8fr;
   gap:50px;
-  align-items:center
+  align-items:center;
 }
 
 .pill{
@@ -73,34 +114,34 @@ a{text-decoration:none;color:inherit}
   font-weight:850;
   letter-spacing:.08em;
   text-transform:uppercase;
-  color:var(--navy)
+  color:var(--navy);
 }
 
 .pill-dot{
   width:8px;
   height:8px;
   background:var(--coral);
-  border-radius:50%
+  border-radius:50%;
 }
 
 h1{
   font-size:clamp(3.1rem,6.5vw,6.1rem);
   line-height:.92;
   letter-spacing:-.07em;
-  margin:22px 0
+  margin:22px 0;
 }
 
 .hero-copy{
   font-size:1.15rem;
   color:#52687b;
-  max-width:680px
+  max-width:680px;
 }
 
 .cta{
   display:flex;
   gap:12px;
   flex-wrap:wrap;
-  margin-top:28px
+  margin-top:28px;
 }
 
 .btn{
@@ -113,16 +154,25 @@ h1{
   border:1px solid var(--navy);
   font-size:.9rem;
   transition:.2s;
-  cursor:pointer
+  cursor:pointer;
 }
 
-.btn:hover{transform:translateY(-2px)}
-.btn-dark{background:var(--navy);color:white}
-.btn-light{background:white}
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-dark{
+  background:var(--navy);
+  color:white;
+}
+
+.btn-light{
+  background:white;
+}
 
 .hero-art{
   position:relative;
-  min-height:370px
+  min-height:370px;
 }
 
 .cloud{
@@ -131,21 +181,21 @@ h1{
   border:1px solid var(--line);
   box-shadow:var(--shadow);
   border-radius:38px;
-  padding:22px
+  padding:22px;
 }
 
 .cloud.one{
   right:5%;
   top:12%;
   width:270px;
-  transform:rotate(4deg)
+  transform:rotate(4deg);
 }
 
 .cloud.two{
   left:0;
   bottom:6%;
   width:240px;
-  transform:rotate(-5deg)
+  transform:rotate(-5deg);
 }
 
 .space-rock{
@@ -161,7 +211,7 @@ h1{
   box-shadow:9px 11px 0 rgba(75,134,173,.18);
   display:flex;
   align-items:center;
-  justify-content:center
+  justify-content:center;
 }
 
 .space-rock:before,
@@ -172,11 +222,16 @@ h1{
   height:14px;
   border-radius:50%;
   background:#14283d;
-  top:34px
+  top:34px;
 }
 
-.space-rock:before{left:34px}
-.space-rock:after{right:34px}
+.space-rock:before{
+  left:34px;
+}
+
+.space-rock:after{
+  right:34px;
+}
 
 .space-rock span{
   position:absolute;
@@ -186,7 +241,7 @@ h1{
   height:16px;
   border-bottom:4px solid #14283d;
   border-radius:0 0 24px 24px;
-  color:transparent
+  color:transparent;
 }
 
 .space-rock span:after{
@@ -195,26 +250,37 @@ h1{
   right:-22px;
   top:-49px;
   color:#fff;
-  font-size:16px
+  font-size:16px;
 }
 
 .star{
   position:absolute;
   color:var(--coral);
-  font-size:24px
+  font-size:24px;
 }
 
-.s1{right:3%;top:5%}
-.s2{left:9%;top:20%;color:var(--blue)}
-.s3{right:25%;bottom:2%;color:var(--yellow)}
+.s1{
+  right:3%;
+  top:5%;
+}
 
-.friendly-face{display:none}
+.s2{
+  left:9%;
+  top:20%;
+  color:var(--blue);
+}
+
+.s3{
+  right:25%;
+  bottom:2%;
+  color:var(--yellow);
+}
 
 .mini-stats{
   display:flex;
   gap:9px;
   flex-wrap:wrap;
-  margin-top:28px
+  margin-top:28px;
 }
 
 .stat{
@@ -224,17 +290,21 @@ h1{
   padding:9px 12px;
   font-size:.78rem;
   font-weight:800;
-  color:#52687b
+  color:#52687b;
 }
 
-section{padding:88px 0}
+/* GENERAL SECTIONS */
+
+section{
+  padding:88px 0;
+}
 
 .section-top{
   display:flex;
   justify-content:space-between;
   gap:35px;
   align-items:end;
-  margin-bottom:30px
+  margin-bottom:30px;
 }
 
 .kicker{
@@ -242,40 +312,42 @@ section{padding:88px 0}
   text-transform:uppercase;
   letter-spacing:.14em;
   font-size:.7rem;
-  font-weight:900
+  font-weight:900;
 }
 
 h2{
   font-size:clamp(2.15rem,4vw,3.5rem);
   line-height:1;
   letter-spacing:-.055em;
-  margin:8px 0 0
+  margin:8px 0 0;
 }
 
 .section-desc{
   max-width:430px;
   color:var(--muted);
-  margin:0
+  margin:0;
 }
+
+/* CANDIDATES */
 
 .roster{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:16px
+  gap:16px;
 }
 
 .card{
   background:#fff;
   border:1px solid var(--line);
   border-radius:var(--radius);
-  box-shadow:var(--shadow)
+  box-shadow:var(--shadow);
 }
 
 .candidate{
   padding:23px;
   min-height:235px;
   position:relative;
-  overflow:hidden
+  overflow:hidden;
 }
 
 .candidate:after{
@@ -284,7 +356,7 @@ h2{
   right:18px;
   top:13px;
   color:var(--yellow);
-  font-size:20px
+  font-size:20px;
 }
 
 .candidate-tag{
@@ -300,32 +372,39 @@ h2{
   border-radius:16px;
   padding:16px 17px;
   margin:0 0 18px;
-  box-shadow:inset 0 -2px 0 rgba(75,134,173,.08)
+  box-shadow:inset 0 -2px 0 rgba(75,134,173,.08);
 }
 
 .candidate h3{
   font-size:.96rem;
   letter-spacing:-.025em;
   line-height:1.2;
-  margin:0 0 8px
+  margin:0 0 8px;
 }
 
 .candidate p{
   font-size:.86rem;
   color:var(--muted);
-  margin:0 0 10px
+  margin:0 0 10px;
 }
 
 .focus{
   color:var(--ink)!important;
-  font-size:.82rem!important
+  font-size:.82rem!important;
 }
 
+/* OPPORTUNITIES */
+
 .opps{
-  background:linear-gradient(135deg,#f2f9fc 0%,#ffffff 55%,#fffaf1 100%);
+  background:linear-gradient(
+    135deg,
+    #f2f9fc 0%,
+    #ffffff 55%,
+    #fffaf1 100%
+  );
   color:var(--navy);
   position:relative;
-  overflow:hidden
+  overflow:hidden;
 }
 
 .opps:before{
@@ -336,16 +415,21 @@ h2{
   border-radius:50%;
   right:-300px;
   top:-300px;
-  background:rgba(75,134,173,.07)
+  background:rgba(75,134,173,.07);
 }
 
-.opps .kicker{color:#4b86ad}
-.opps .section-desc{color:#627487}
+.opps .kicker{
+  color:#4b86ad;
+}
+
+.opps .section-desc{
+  color:#627487;
+}
 
 .opportunity-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:16px
+  gap:16px;
 }
 
 .opp{
@@ -354,14 +438,14 @@ h2{
   border-radius:var(--radius);
   padding:27px;
   min-height:300px;
-  position:relative
+  position:relative;
 }
 
 .opp h3{
   font-size:1.45rem;
   line-height:1.15;
   letter-spacing:-.035em;
-  margin:11px 0 10px
+  margin:11px 0 10px;
 }
 
 .opp-location{
@@ -369,85 +453,59 @@ h2{
   text-transform:uppercase;
   letter-spacing:.13em;
   font-weight:900;
-  color:#4b86ad
+  color:#4b86ad;
 }
 
 .opp p{
   color:#627487;
-  font-size:.87rem
+  font-size:.87rem;
 }
 
 .pay{
   margin-top:18px;
   padding-top:16px;
-  border-top:1px solid var(--line)
+  border-top:1px solid var(--line);
 }
 
 .pay strong{
   display:block;
   font-size:1rem;
-  margin-bottom:5px
+  margin-bottom:5px;
 }
 
 .pay span{
   display:block;
   color:#627487;
-  font-size:.79rem
+  font-size:.79rem;
 }
 
 .details{
   margin:14px 0 0;
   padding-left:18px;
   color:#627487;
-  font-size:.83rem
+  font-size:.83rem;
 }
 
 .area{
   margin-top:16px;
   font-size:.8rem;
-  color:#627487
+  color:#627487;
 }
 
 .location-note{
   text-align:center;
   margin-top:34px;
   color:#627487;
-  font-size:.77rem
+  font-size:.77rem;
 }
 
-.contact-grid{
-  display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  gap:18px
-}
-
-.contact-copy{
-  padding:34px;
-  background:var(--cream);
-  border-radius:var(--radius);
-  border:1px solid #eadfca
-}
-
-.contact-copy h3{
-  font-size:2rem;
-  line-height:1.05;
-  letter-spacing:-.045em;
-  margin:12px 0
-}
-
-.contact-copy p{color:var(--muted)}
-
-.email{
-  display:inline-block;
-  margin-top:10px;
-  font-weight:900
-}
+/* CONTACT */
 
 .inquiry-paths{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:14px;
-  margin-bottom:18px
+  margin-bottom:18px;
 }
 
 .inquiry-card{
@@ -459,12 +517,12 @@ h2{
   align-items:center;
   gap:13px;
   box-shadow:var(--shadow);
-  transition:.2s
+  transition:.2s;
 }
 
 .inquiry-card:hover{
   transform:translateY(-2px);
-  border-color:#9fc3d8
+  border-color:#9fc3d8;
 }
 
 .inquiry-icon{
@@ -475,27 +533,65 @@ h2{
   display:grid;
   place-items:center;
   font-weight:900;
-  color:#4b86ad
+  color:#4b86ad;
 }
 
 .inquiry-card strong{
   display:block;
-  font-size:.88rem
+  font-size:.88rem;
 }
 
 .inquiry-card small{
   display:block;
   color:var(--muted);
   font-size:.75rem;
-  margin-top:2px
+  margin-top:2px;
 }
 
-form{padding:28px}
+.contact-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:18px;
+  width:100%;
+  max-width:100%;
+}
+
+.contact-copy{
+  padding:34px;
+  background:var(--cream);
+  border-radius:var(--radius);
+  border:1px solid #eadfca;
+  min-width:0;
+}
+
+.contact-copy h3{
+  font-size:2rem;
+  line-height:1.05;
+  letter-spacing:-.045em;
+  margin:12px 0;
+}
+
+.contact-copy p{
+  color:var(--muted);
+}
+
+.email{
+  display:inline-block;
+  margin-top:10px;
+  font-weight:900;
+  overflow-wrap:anywhere;
+}
+
+form{
+  padding:28px;
+  min-width:0;
+  width:100%;
+}
 
 .form-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:14px
+  gap:14px;
 }
 
 label{
@@ -503,78 +599,198 @@ label{
   font-size:.75rem;
   font-weight:850;
   margin-bottom:6px;
-  color:#52687b
+  color:#52687b;
 }
 
 input,
 select,
 textarea{
   width:100%;
+  max-width:100%;
+  min-width:0;
   font:inherit;
   padding:12px 13px;
   border:1px solid var(--line);
   border-radius:11px;
   background:#fbfefd;
   color:var(--ink);
-  outline:none
+  outline:none;
 }
 
 textarea{
   min-height:125px;
-  resize:vertical
+  resize:vertical;
 }
 
-.full{grid-column:1/-1}
+.full{
+  grid-column:1/-1;
+}
 
 .form-note{
   font-size:.73rem;
   color:var(--muted);
-  margin:12px 0 17px
+  margin:12px 0 17px;
 }
+
+/* FOOTER */
 
 footer{
   padding:30px 0 40px;
   border-top:1px solid var(--line);
   color:var(--muted);
-  font-size:.76rem
+  font-size:.76rem;
 }
 
 .footer-row{
   display:flex;
   justify-content:space-between;
   gap:20px;
-  flex-wrap:wrap
+  flex-wrap:wrap;
 }
 
+/* TABLET */
+
 @media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr}
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
   .hero-art{
     max-width:520px;
     width:100%;
-    margin:auto
+    margin:auto;
   }
-  .roster{grid-template-columns:repeat(2,1fr)}
+
+  .roster{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-copy,
+  form{
+    width:100%;
+    min-width:0;
+  }
 }
 
+/* MOBILE */
+
 @media(max-width:650px){
-  .nav{display:none}
-  .hero{padding-top:35px}
-  .hero-art{min-height:300px}
+
+  html,
+  body{
+    overflow-x:hidden;
+    width:100%;
+    max-width:100%;
+  }
+
+  .nav{
+    display:none;
+  }
+
+  .hero{
+    padding-top:35px;
+  }
+
+  .hero-art{
+    min-height:300px;
+    width:100%;
+    overflow:hidden;
+  }
+
   .cloud.one{
     right:0;
-    width:210px
+    width:210px;
   }
-  .cloud.two{width:190px}
-  section{padding:65px 0}
-  .section-top{display:block}
-  .section-desc{margin-top:14px}
+
+  .cloud.two{
+    width:190px;
+  }
+
+  section{
+    padding:65px 0;
+  }
+
+  .section-top{
+    display:block;
+  }
+
+  .section-desc{
+    margin-top:14px;
+  }
+
   .roster,
   .opportunity-grid,
   .form-grid{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
-  .full{grid-column:auto}
-  .inquiry-paths{grid-template-columns:1fr}
+
+  .full{
+    grid-column:auto;
+  }
+
+  .inquiry-paths{
+    grid-template-columns:1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .contact-copy,
+  form{
+    width:100%;
+    min-width:0;
+    padding:22px;
+  }
+
+  .wrap{
+    width:min(100% - 28px,1160px);
+    max-width:calc(100% - 28px);
+  }
+
+  .candidate,
+  .opp,
+  .card{
+    max-width:100%;
+    min-width:0;
+  }
+
+  .btn{
+    max-width:100%;
+  }
+
+  .cta{
+    max-width:100%;
+  }
+
+  h1{
+    font-size:clamp(2.8rem,14vw,4.4rem);
+  }
+
+  .hero-copy{
+    font-size:1rem;
+  }
+
+  .mini-stats{
+    max-width:100%;
+  }
+
+  .stat{
+    max-width:100%;
+  }
+
+  input,
+  select,
+  textarea{
+    max-width:100%;
+    min-width:0;
+  }
 }
 </style>
 </head>
@@ -582,8 +798,20 @@ footer{
 <body>
 
 <header class="wrap topbar">
+
   <a class="logo" href="#top">
-    <img class="brand-logo" src="135A72A4-1369-4C3C-AA1E-01EBC50C41BD.PNG" alt="SpaceRock Solutions">
+
+    <!--
+      Logo is embedded directly into this HTML.
+      No separate logo file is required.
+    -->
+
+    <img
+      class="brand-logo"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAAAXNSR0IArs4c6QAAAIRlWElmTU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAACQAAAAAQAAAJAAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAAfSgAwAEAAAAAQAAAfQAAAAAZVYvFQAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAABxpRE9UAAAAAgAAAAAAAAD6AAAAKAAAAPoAAAD6AAJRKTTTTDgAAEAASURBVHgBbJ3r20/V+7WLKArRjmxuEiHbRFERUVQ2qVQUZVdIoef/X884x7iutdbt+3sxjzk/N+/P4xzXmHM999xzzw+s55/PWqJ9yfNL9HvJsGTJtJZyXrp0WDquF3R+YXjhBf3thWXDsmVLdWZ/YVjGvny5zsuG5Vqcl/d6cfnw4kvLh5defFG71osvDS+9NK0VK14aVqxYob+t8L5ixcphxcqVw0r9bcXLLw8rtV7m98pXhpc5e70yvLLq5eGVV7T3WrVK51XDqlWvaK0eVq3WefXqYTVrzaphjXfOa4Y1Xq8Or67RepW11vta7zqvXTus01q7bp3XunU6r31tWLdO67V13l9/fd3w2muvD6+//lrtOuv3G69rf+ON4Y35evON4c0336z1lva3hrfeylq//q1h/Vvr9Xv9sH79tDZw3rBh2PC2FvuGt73e5vfbG4eNGzcMG72/nX3TJv1t47BJa6POm1ibszZv2TRs2bx52LxFa/OWYcuWaS0sbBkWFhb0t4Vhq/aFha3DwtatOW/bNmzV2sbvre8M2zh7vTO8s33b8M477wzbtdjf2b5d+/Zh+3b9bfu7w/Z3s97V/u6O7cMO7Tt27JitncPOHVo7dw7v7Xxvtr83vPfee8Murfd27fLapX3Xe7uHXbu0duusfc+eXcPu3Xu0787+Puc9w/tae95/f3h/vva+P+zdu7fWPu37hn37svbv3zfs379fv/d758w6wH7w4HDg4IHh4IEDw4EDOmsd1O8DBw8Nhw4dGA55P5j9gw/0t0PDB1qHdP6AdZh1eDj84QfDh951Pvzh8OGH0zpy5Mhw5MjR4UPtR7VzPnL06PCR9qMffeT1kX4fPfrx8NFHrI+8f3zso+Hjjz8ejml5P3ZM+7HhmPZjx44Px44fH473+uTY8Mknn9T6dNw//fTTgfXZp59p/2zaP/tsOKH12YkTXie0nzhxMuukzidPDp9/fmI4efJz7Tqzn+L8+XBK6/NTp4ZT83X61HD69OlaXwynv/hi+KLWmTNfDGfOnNHvM97PnDnr/az+dubLL4ezX54dvjx7djh7VmetL/23r4avvvpy+OrL2X7unP52bjj31VfDOZ29zp8fzrO+Pjd87Z3fXw9ff836Zvi"
+      alt="SpaceRock Solutions"
+    >
+
   </a>
 
   <nav class="nav">
@@ -591,14 +819,20 @@ footer{
     <a href="#opportunities">Opportunities</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
+
 
 <main id="top">
 
+<!-- HERO -->
+
 <section class="hero">
+
   <div class="wrap hero-grid">
 
     <div>
+
       <div class="pill">
         <span class="pill-dot"></span>
         Pediatric dental recruitment
@@ -613,8 +847,13 @@ footer{
       </p>
 
       <div class="cta">
-        <a class="btn btn-dark" href="#opportunities">View opportunities</a>
-        <a class="btn btn-light" href="#contact">Talk to SpaceRock</a>
+        <a class="btn btn-dark" href="#opportunities">
+          View opportunities
+        </a>
+
+        <a class="btn btn-light" href="#contact">
+          Talk to SpaceRock
+        </a>
       </div>
 
       <div class="mini-stats">
@@ -622,7 +861,9 @@ footer{
         <span class="stat">Independent practices</span>
         <span class="stat">90-day · 50% refund guarantee</span>
       </div>
+
     </div>
+
 
     <div class="hero-art" aria-hidden="true">
 
@@ -635,25 +876,42 @@ footer{
       </div>
 
       <div class="cloud one">
-        <strong>For practice owners</strong>
+
+        <strong>
+          For practice owners
+        </strong>
+
         <br>
+
         <span style="color:#647688;font-size:.84rem">
           Targeted searches. Qualified pediatric specialists. Direct conversations.
         </span>
+
       </div>
 
+
       <div class="cloud two">
-        <strong>For pediatric specialists</strong>
+
+        <strong>
+          For pediatric specialists
+        </strong>
+
         <br>
+
         <span style="color:#647688;font-size:.84rem">
           No candidate fees. Confidential access to independent practices.
         </span>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
+
+<!-- CANDIDATE ROSTER -->
 
 <section id="roster">
 
@@ -662,12 +920,16 @@ footer{
     <div class="section-top">
 
       <div>
-        <div class="kicker">Active candidate roster</div>
+
+        <div class="kicker">
+          Active candidate roster
+        </div>
 
         <h2>
           Pediatric specialists<br>
           ready for the right market.
         </h2>
+
       </div>
 
       <p class="section-desc">
@@ -679,13 +941,18 @@ footer{
 
     <div class="roster">
 
+
+      <!-- 1 -->
+
       <article class="card candidate">
 
         <div class="candidate-tag">
           Denver Area · CO
         </div>
 
-        <h3>Pediatric Specialist</h3>
+        <h3>
+          Pediatric Specialist
+        </h3>
 
         <p>
           <b>DDS (2019)</b> · Pediatric Residency Completed (2021)
@@ -702,13 +969,17 @@ footer{
       </article>
 
 
+      <!-- 2 -->
+
       <article class="card candidate">
 
         <div class="candidate-tag">
           Minneapolis / St. Paul · MN
         </div>
 
-        <h3>Pediatric Specialist</h3>
+        <h3>
+          Pediatric Specialist
+        </h3>
 
         <p>
           <b>DDS (2021)</b> · Pediatric Residency Completed (2023)
@@ -725,13 +996,17 @@ footer{
       </article>
 
 
+      <!-- 3 -->
+
       <article class="card candidate">
 
         <div class="candidate-tag">
           Jacksonville Area · FL
         </div>
 
-        <h3>Pediatric Specialist</h3>
+        <h3>
+          Pediatric Specialist
+        </h3>
 
         <p>
           <b>Pediatric Dentistry Residency Graduate (2026)</b>
@@ -748,13 +1023,17 @@ footer{
       </article>
 
 
+      <!-- 4 -->
+
       <article class="card candidate">
 
         <div class="candidate-tag">
           Memphis Area · TN
         </div>
 
-        <h3>Pediatric Specialist</h3>
+        <h3>
+          Pediatric Specialist
+        </h3>
 
         <p>
           <b>DDS (2021)</b> · Pediatric Residency Completed (2023)
@@ -771,13 +1050,17 @@ footer{
       </article>
 
 
+      <!-- 5 -->
+
       <article class="card candidate">
 
         <div class="candidate-tag">
           Southern California
         </div>
 
-        <h3>Pediatric Specialist</h3>
+        <h3>
+          Pediatric Specialist
+        </h3>
 
         <p>
           <b>DDS (2020)</b> · Pediatric Residency Completed (2022) · Board-Certified
@@ -794,13 +1077,17 @@ footer{
       </article>
 
 
+      <!-- 6 -->
+
       <article class="card candidate">
 
         <div class="candidate-tag">
           Southern California
         </div>
 
-        <h3>Pediatric Specialist</h3>
+        <h3>
+          Pediatric Specialist
+        </h3>
 
         <p>
           <b>DDS (2019)</b> · Pediatric Residency Completed (2021)
@@ -817,13 +1104,17 @@ footer{
       </article>
 
 
+      <!-- 7 -->
+
       <article class="card candidate">
 
         <div class="candidate-tag">
           New York City Metro · NY
         </div>
 
-        <h3>Pediatric Specialist</h3>
+        <h3>
+          Pediatric Specialist
+        </h3>
 
         <p>
           <b>DDS (2021)</b> · Pediatric Residency Completed (2023)
@@ -840,13 +1131,17 @@ footer{
       </article>
 
 
+      <!-- 8 -->
+
       <article class="card candidate">
 
         <div class="candidate-tag">
           New York City Metro · NY
         </div>
 
-        <h3>Pediatric Specialist</h3>
+        <h3>
+          Pediatric Specialist
+        </h3>
 
         <p>
           <b>Pediatric Dentistry Residency Graduate (2026)</b>
@@ -863,13 +1158,17 @@ footer{
       </article>
 
 
+      <!-- 9 -->
+
       <article class="card candidate">
 
         <div class="candidate-tag">
           Cleveland Area · OH
         </div>
 
-        <h3>Pediatric Resident</h3>
+        <h3>
+          Pediatric Resident
+        </h3>
 
         <p>
           <b>Graduating 2027</b>
@@ -885,10 +1184,42 @@ footer{
 
       </article>
 
+
+      <!-- 10 — ATLANTA -->
+
+      <article class="card candidate">
+
+        <div class="candidate-tag">
+          Atlanta · GA
+        </div>
+
+        <h3>
+          Pediatric Specialist
+        </h3>
+
+        <p>
+          <b>DDS (2020)</b> · Pediatric Residency Completed (2022)
+        </p>
+
+        <p>
+          <b>Experience:</b> 4+ years of pediatric dental experience.
+        </p>
+
+        <p class="focus">
+          <b>Focus:</b> Open to opportunities in the area.
+        </p>
+
+      </article>
+
+
     </div>
+
   </div>
+
 </section>
 
+
+<!-- OPPORTUNITIES -->
 
 <section id="opportunities" class="opps">
 
@@ -897,14 +1228,15 @@ footer{
     <div class="section-top">
 
       <div>
+
         <div class="kicker">
           Confidential private practice opportunities
         </div>
 
         <h2>
-          Six markets.<br>
-          Clear terms.
+          Active opportunities.
         </h2>
+
       </div>
 
       <p class="section-desc">
@@ -916,6 +1248,8 @@ footer{
 
     <div class="opportunity-grid">
 
+
+      <!-- REDDING -->
 
       <article class="opp">
 
@@ -954,10 +1288,23 @@ footer{
         </div>
 
         <ul class="details">
-          <li>4 days/week standard; 5-day option available</li>
-          <li>Partnership track & relocation assistance</li>
-          <li>Direct clinical mentorship</li>
-          <li>Employer-paid malpractice, CE, licensing, dues, healthcare & 401(k)</li>
+
+          <li>
+            4 days/week standard; 5-day option available
+          </li>
+
+          <li>
+            Partnership track & relocation assistance
+          </li>
+
+          <li>
+            Direct clinical mentorship
+          </li>
+
+          <li>
+            Employer-paid malpractice, CE, licensing, dues, healthcare & 401(k)
+          </li>
+
         </ul>
 
         <div class="area">
@@ -966,6 +1313,8 @@ footer{
 
       </article>
 
+
+      <!-- COLUMBUS -->
 
       <article class="opp">
 
@@ -1001,6 +1350,8 @@ footer{
       </article>
 
 
+      <!-- ASHEVILLE -->
+
       <article class="opp">
 
         <div class="opp-location">
@@ -1034,6 +1385,8 @@ footer{
 
       </article>
 
+
+      <!-- ANNAPOLIS -->
 
       <article class="opp">
 
@@ -1069,6 +1422,8 @@ footer{
       </article>
 
 
+      <!-- SAN ANTONIO -->
+
       <article class="opp">
 
         <div class="opp-location">
@@ -1102,6 +1457,8 @@ footer{
       </article>
 
 
+      <!-- LOWELL -->
+
       <article class="opp">
 
         <div class="opp-location">
@@ -1127,6 +1484,7 @@ footer{
         <p>
           <b>Schedule:</b>
           3–4 days/week.
+
           <b>Benefits:</b>
           3 weeks paid vacation, 1 week sick leave, customizable benefits.
         </p>
@@ -1137,15 +1495,20 @@ footer{
 
       </article>
 
+
     </div>
+
 
     <div class="location-note">
       Based in Bangalore, India · Exclusively focused on placing pediatric dentists in the United States
     </div>
 
   </div>
+
 </section>
 
+
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -1154,6 +1517,7 @@ footer{
     <div class="section-top">
 
       <div>
+
         <div class="kicker">
           Direct contact & custom inquiries
         </div>
@@ -1161,6 +1525,7 @@ footer{
         <h2>
           Start an inquiry in under a minute.
         </h2>
+
       </div>
 
       <p class="section-desc">
@@ -1177,12 +1542,23 @@ footer{
         href="#contact-form"
         onclick="setInquiry('Practice Owner')"
       >
-        <span class="inquiry-icon">⌂</span>
+
+        <span class="inquiry-icon">
+          ⌂
+        </span>
 
         <span>
-          <strong>Practice Owners</strong>
-          <small>Tell us where you are hiring.</small>
+
+          <strong>
+            Practice Owners
+          </strong>
+
+          <small>
+            Tell us where you are hiring.
+          </small>
+
         </span>
+
       </a>
 
 
@@ -1191,19 +1567,35 @@ footer{
         href="#contact-form"
         onclick="setInquiry('Pediatric Specialist / Resident')"
       >
-        <span class="inquiry-icon">✦</span>
+
+        <span class="inquiry-icon">
+          ✦
+        </span>
 
         <span>
-          <strong>Pediatric Specialists & Residents</strong>
-          <small>Tell us where you want to practice.</small>
+
+          <strong>
+            Pediatric Specialists & Residents
+          </strong>
+
+          <small>
+            Tell us where you want to practice.
+          </small>
+
         </span>
+
       </a>
 
     </div>
 
 
-    <div class="contact-grid" id="contact-form">
+    <div
+      class="contact-grid"
+      id="contact-form"
+    >
 
+
+      <!-- CONTACT INFORMATION -->
 
       <div class="contact-copy">
 
@@ -1237,7 +1629,9 @@ footer{
         </a>
 
 
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+        <div
+          style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px"
+        >
 
           <button
             class="btn btn-dark"
@@ -1260,6 +1654,8 @@ footer{
       </div>
 
 
+      <!-- FORM -->
+
       <form
         class="card"
         action="mailto:aswin@spacerocksolutions.com"
@@ -1281,6 +1677,7 @@ footer{
               name="Inquiry Type"
               required
             >
+
               <option value="">
                 Select one
               </option>
@@ -1292,6 +1689,7 @@ footer{
               <option>
                 Pediatric Specialist / Resident
               </option>
+
             </select>
 
           </div>
